@@ -32,7 +32,7 @@
       <span>tweeter </span>
         <div class="icon-container">
           <p class="text"><strong>Write</strong> a new tweet</p>
-          <i class="fa-solid fa-angles-down"></i>
+          <i id="arrow" class="fa-solid fa-angles-down"></i>
         </div> 
     </nav>
 
@@ -48,17 +48,43 @@
       </div>  
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="container">
       <section class="new-tweet">
         <h2 >What are you humming about?</h2>
         <form action="/tweets" method="POST">
           <textarea name="text" id="tweet-text"></textarea>
           <div class="button">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"><!maxChars></output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+
+      <section class="new-section">
+        <article class="article.tweet">
+          <header class="article-header"> 
+            <div class="faceName">
+              <img src="/images/face.png">
+              <p> YOUR NAME</p>
+            </div>
+            <p>@NameOfPerson</p>
+          </header>
+          <div>
+            <textnew class="new-text">
+              TESTTTTTTTTTttttttteeeeeeeeeeeeeessssssssssss
+            </textnew>
+          </div>
+          <footer class="footer">
+              <p>100 days ago</p>
+              <div id="treeicon">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+          </footer>
+        </article>
+      </section>
+
     </main>
   </body>
 </html>
