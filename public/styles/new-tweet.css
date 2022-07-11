@@ -1,0 +1,45 @@
+
+main {
+  width: 100%;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  font-size: 20px;
+}
+
+
+form {
+  text-align-last: justify;
+  border-style: none;
+
+}
+
+textarea {
+  border-style: none;
+  outline:none;
+  border-bottom: solid;
+  background: transparent;
+  width: 100%;
+  font-size:larger ;
+  resize: none;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+button  {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  font-size: 30px;
+  color: azure;
+  background-color: #1723c4;
+  margin-top: 10px;
+} 
+
+.counter {
+  font-family: 'Bungee', cursive;
+  align-self: center;
+  font-size: 30px;
+}
