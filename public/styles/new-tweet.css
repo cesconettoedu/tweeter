@@ -57,23 +57,30 @@ button  {
 
 .article-header{
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .faceName{
   display: flex;
 }
 
+.nam {
+  margin-left: 15px; 
+}
+
+
 .new-text {
   display: flex;
-  border-bottom: solid;
   width: 100%;
   font-size:larger ;
   padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
+  border-top: solid;
   align-items: center;
 }
 
