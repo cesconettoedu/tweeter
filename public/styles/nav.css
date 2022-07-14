@@ -20,7 +20,22 @@ nav span {
 }
 
 #arrow {
-  color: red
+  color: red;
+  animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(-20%);
+  }
 }
 
 .icon-container {
