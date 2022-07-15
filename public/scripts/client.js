@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 const renderTweets = (tweets) => {
   tweets.forEach((tweet) => {
     let $tweet = createTweetElement(tweet);
@@ -13,6 +12,15 @@ const renderTweets = (tweets) => {
 };
 
 const createTweetElement = function (tweet) {
+
+  const escape = function (str) {
+    let div = document.createElement("div" );
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
+
   let $article = `
               <section class="new-section">
                 <article class="article.tweet">
@@ -24,7 +32,7 @@ const createTweetElement = function (tweet) {
                           <p>${tweet.user.handle}</p>
                         </header>
                         <div class="new-text">
-                            ${tweet.content.text}
+                            ${safeHTML}
                         </div>
                         <footer class="footer">
                             <p>${timeago.format(tweet.created_at)}</p>
@@ -72,10 +80,13 @@ $(document).ready(function () {
           renderTweets(newTweet);
         });
       },
+      error: (error) => {
+        console.error(error);
+      },
     });
   });
-
   loadtweets();
 });
 
-const $form = $("#formtotype");
+
+// <script>alert('TESTEEEEEEEEEEE');</script>
