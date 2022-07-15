@@ -49,6 +49,10 @@ button  {
 
 /* section article tweeter*/
 
+#tweets-container {
+  word-break: break-all;
+}
+
 .new-section {
   margin-top: 2em;
   border: solid;
@@ -102,4 +106,21 @@ button  {
 }
 .fa-heart:hover{
   color: rgb(150, 119, 19);
+}
+
+/* to error */
+
+#nocontent {
+  display:none;
+}
+
+#nocontenttext {
+  border: solid;
+  color: red;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  text-transform: uppercase;
 }

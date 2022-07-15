@@ -61,11 +61,20 @@ $(document).ready(function () {
     event.preventDefault(); //supost not submit and not reload the page
 
     if ($(this).find("textarea").val().length < 1) {
-      alert("no content to submit!");
+     $("#nocontent").show();   //HEX CODE
+     $("#nocontenttext").html("⚠️ 😒 no content to submit! ⚠️");
+      $("body").click(function(){
+        $("#nocontent").hide();
+      });
       return;
     }
+
     if ($(this).find("textarea").val().length > 140) {
-      alert("maximum character exceeded!");
+      $("#nocontent").show(); 
+      $("#nocontenttext").html("&#x2620 🤬 maximum character exceeded! &#x2620");
+      $("textarea").click(function(){
+      $("#nocontent").hide();
+      });
       return;
     }
     $.ajax({
@@ -86,7 +95,5 @@ $(document).ready(function () {
     });
   });
   loadtweets();
+  
 });
-
-
-// <script>alert('TESTEEEEEEEEEEE');</script>
