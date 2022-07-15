@@ -19,6 +19,10 @@ nav span {
   
 }
 
+#logandbird {
+  display: flex;
+}
+
 #arrow {
   color: red;
   animation: updown 2s ease infinite;
