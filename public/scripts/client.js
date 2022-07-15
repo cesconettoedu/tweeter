@@ -12,9 +12,8 @@ const renderTweets = (tweets) => {
 };
 
 const createTweetElement = function (tweet) {
-
   const escape = function (str) {
-    let div = document.createElement("div" );
+    let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -61,19 +60,21 @@ $(document).ready(function () {
     event.preventDefault(); //supost not submit and not reload the page
 
     if ($(this).find("textarea").val().length < 1) {
-     $("#nocontent").show();   //HEX CODE
-     $("#nocontenttext").html("⚠️ 😒 no content to submit! ⚠️");
-      $("body").click(function(){
+      $("#nocontent").show(); //HEX CODE
+      $("#nocontenttext").html("⚠️ 😒 no content to submit! ⚠️");
+      $("body").click(function () {
         $("#nocontent").hide();
       });
       return;
     }
 
     if ($(this).find("textarea").val().length > 140) {
-      $("#nocontent").show(); 
-      $("#nocontenttext").html("&#x2620 🤬 maximum character exceeded! &#x2620");
-      $("textarea").click(function(){
-      $("#nocontent").hide();
+      $("#nocontent").show();
+      $("#nocontenttext").html(
+        "&#x2620 🤬 maximum character exceeded! &#x2620"
+      );
+      $("textarea").click(function () {
+        $("#nocontent").hide();
       });
       return;
     }
@@ -94,6 +95,23 @@ $(document).ready(function () {
       },
     });
   });
-  loadtweets();
+
+  // button to return to the top of the page
+  const $backToTop = $("#back-to-top");
   
+  $backToTop.hide();
+
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 100) {
+      $backToTop.fadeIn();
+    } else {
+      $backToTop.fadeOut();
+    }
+  });
+
+  $backToTop.on("click", function (e) {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+
+  loadtweets();
 });
