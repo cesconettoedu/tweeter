@@ -69,6 +69,7 @@ button  {
 .article-header{
   justify-content: space-between;
   margin-top: 20px;
+  width: auto;
 }
 
 .faceName{
