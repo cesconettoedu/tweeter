@@ -11,8 +11,8 @@ const renderTweets = (tweets) => {
   });
 };
 
-const createTweetElement = function (tweet) {
-  const escape = function (str) {
+const createTweetElement = function(tweet) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -47,22 +47,22 @@ const createTweetElement = function (tweet) {
   return $article;
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   const loadtweets = () => {
-    $.ajax("http://localhost:8080/tweets", { method: "GET" }).then(function (
+    $.ajax("http://localhost:8080/tweets", { method: "GET" }).then(function(
       dataUser
     ) {
       $("#tweets-container").append(renderTweets(dataUser));
     });
   };
 
-  $("#formtotype").on("submit", function (event) {
+  $("#formtotype").on("submit", function(event) {
     event.preventDefault(); //supost not submit and not reload the page
 
     if ($(this).find("textarea").val().length < 1) {
       $("#nocontent").show(); //HEX CODE
       $("#nocontenttext").html("⚠️ 😒 no content to submit! ⚠️");
-      $("body").click(function () {
+      $("body").click(function() {
         $("#nocontent").hide();
       });
       return;
@@ -73,7 +73,7 @@ $(document).ready(function () {
       $("#nocontenttext").html(
         "&#x2620 🤬 maximum character exceeded! &#x2620"
       );
-      $("textarea").click(function () {
+      $("textarea").click(function() {
         $("#nocontent").hide();
       });
       return;
@@ -83,7 +83,7 @@ $(document).ready(function () {
       url: "http://localhost:8080/tweets",
       type: "application/json",
       data: $(this).serialize(),
-      success: function () {
+      success: function() {
         $("textarea").val("");
         $.get("http://localhost:8080/tweets", (data) => {
           const newTweet = [data.slice(-1).pop()];
@@ -101,7 +101,7 @@ $(document).ready(function () {
   
   $backToTop.hide();
 
-  $(window).on("scroll", function () {
+  $(window).on("scroll", function() {
     if ($(this).scrollTop() > 100) {
       $backToTop.fadeIn();
     } else {
@@ -109,7 +109,7 @@ $(document).ready(function () {
     }
   });
 
-  $backToTop.on("click", function (e) {
+  $backToTop.on("click", function(e) {
     $("html, body").animate({ scrollTop: 0 }, 500);
   });
 
