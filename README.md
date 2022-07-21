@@ -5,9 +5,13 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 
-"This page shows the interface for large screens, as the layout looks."
+"This next 2 screenshot shows the interface for large screens, as the layout looks."
 !["This page shows the interface for large screens, as the layout looks."](https://github.com/cesconettoedu/tweeter/blob/master/public/images/gitReadme/profile-hex1.png)
 !["This page shows the interface for large screens, as the layout looks."](https://github.com/cesconettoedu/tweeter/blob/master/public/images/gitReadme/profile-hex2.png)
+
+
+"This screenshot show the interface for small screens, as the layout looks."
+!["This page shows the interface for large screens, as the layout looks."](https://github.com/cesconettoedu/tweeter/blob/master/public/images/gitReadme/profile-hex1.png)
 
 
 
