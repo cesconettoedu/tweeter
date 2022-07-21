@@ -11,7 +11,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 "This screenshot show the interface for small screens, as the layout looks."
-!["This page shows the interface for large screens, as the layout looks."](https://github.com/cesconettoedu/tweeter/blob/master/public/images/gitReadme/profile-hex1.png)
+!["This page shows the interface for large screens, as the layout looks."](https://github.com/cesconettoedu/tweeter/blob/master/public/images/gitReadme/profile-hex3.png)
 
 
 
