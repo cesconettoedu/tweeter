@@ -48,6 +48,7 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
+  $("#counter").html(140);
   const loadtweets = () => {
     $.ajax("http://localhost:8080/tweets", { method: "GET" }).then(function(
       dataUser
@@ -88,6 +89,7 @@ $(document).ready(function() {
         $.get("http://localhost:8080/tweets", (data) => {
           const newTweet = [data.slice(-1).pop()];
           renderTweets(newTweet);
+          $("#counter").html(140);
         });
       },
       error: (error) => {

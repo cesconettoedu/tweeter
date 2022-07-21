@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   $("#tweet-text").on("input", function(){
-
+    console.log($("#tweet-text").val());
     const maxChars = 140;
 
     
