@@ -1,10 +1,8 @@
 $(document).ready(function() {
   
   $("#tweet-text").on("input", function(){
-    console.log($("#tweet-text").val());
-    const maxChars = 140;
-
     
+    const maxChars = 140;
     const inputLength = $(this).val().length;
     const restNum = maxChars - inputLength
     const $quantityNum = $('.counter');
@@ -16,7 +14,5 @@ $(document).ready(function() {
     } else {
       $quantityNum.css('color', '#545149');
     }
-
   })
-
 });

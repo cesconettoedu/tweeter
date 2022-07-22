@@ -79,6 +79,7 @@ $(document).ready(function() {
       });
       return;
     }
+    
     $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets",

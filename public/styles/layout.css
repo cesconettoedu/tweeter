@@ -71,6 +71,7 @@ body {
   nav{
     background-color: #66dbff;
     background-image: url("https://www.transparenttextures.com/patterns/type.png");
+    z-index: 1;
   }
 
   /* smoth transitions */
